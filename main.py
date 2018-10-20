@@ -25,10 +25,21 @@ app = Flask(__name__)
 def index():
     return render_template('hello.html')
 
-@app.route('/book/')
-def book():
-    return render_template('book.html')
+@app.route('/about/')
+def about():
+    return render_template('about.html')
 
+@app.route('/books/')
+def books():
+    return render_template('books.html')
+
+@app.route('/authors/')
+def authors():
+    return render_template('authors.html')
+
+@app.route('/publishers/')
+def publishers():
+    return render_template('publishers.html')
 
 # if main.py is run directly, i.e., as the main module, it will be assigned the value main
 # and if it's main go ahead and run the application.
@@ -36,7 +47,7 @@ def book():
 # the code, app.run(), will not be executed
 
 if __name__ == "__main__":
-    app.run('104.248.122.33', '80')
+    app.run()
 #----------------------------------------
 # end of main.py
 #----------------------------------------

@@ -25,6 +25,9 @@ app = Flask(__name__)
 def index():
     return render_template('hello.html')
 
+@app.route('/book/')
+def book():
+    return render_template('book.html')
 
 
 # if main.py is run directly, i.e., as the main module, it will be assigned the value main

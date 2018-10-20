@@ -36,7 +36,7 @@ def book():
 # the code, app.run(), will not be executed
 
 if __name__ == "__main__":
-    app.run()
+    app.run('104.248.122.33', '80')
 #----------------------------------------
 # end of main.py
 #----------------------------------------

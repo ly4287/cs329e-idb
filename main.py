@@ -41,6 +41,43 @@ def authors():
 def publishers():
     return render_template('publishers.html')
 
+@app.route('/harrypotter/')
+def harrypotter():
+    return render_template('harrypotter.html')
+
+@app.route('/eggs/')
+def eggs():
+    return render_template('eggs.html')
+
+@app.route('/romeo/')
+def romeo():
+    return render_template('romeo.html')
+
+@app.route('/jkrowling/')
+def jkrowling():
+    return render_template('jkrowling.html')
+
+@app.route('/seuss/')
+def suess():
+    return render_template('suess.html')
+
+@app.route('/shakespeare/')
+def shakespeare():
+    return render_template('shakespeare.html')
+
+@app.route('/pottermore/')
+def pottermore():
+    return render_template('pottermore.html')
+
+@app.route('/randomhouse/')
+def randomhouse():
+    return render_template('randomhouse.html')
+
+@app.route('/barrons/')
+def barrons():
+    return render_template('barrons.html')
+
+
 # if main.py is run directly, i.e., as the main module, it will be assigned the value main
 # and if it's main go ahead and run the application.
 # if this application is imported, then the __name__ is no longer __main__ and

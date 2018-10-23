@@ -4,24 +4,39 @@
 	</head>
 	<hr />
 	<body>
-
-		<table> <!-- Table tags: <table> </table> -->
+		<table> 
 			<tr>     <!-- Row tags: <tr> </tr> -->
-		  <td>Data 1,1</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
-		  <td>Data 1,2</td>
-		</tr>
-		<tr>
-		  <td>Data 2,1</td>
-		  <td>Data 2,2</td>
-		</tr>
-		<tr>
-		  <td>Data 3,1</td>
-		  <td>Data 3,2</td>
-		</tr>
-    </table>
+		  		<td>Name</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
+		  		<td>William Shakespeare</td>
+			</tr>
+			<tr>
+		  		<td>Born</td>
+		  		<td>Stratford-upon-Avon, Warwickshire, England</td>
+			</tr>
+			<tr>
+		  		<td>Died</td>
+		  		<td>23 April 1616 (aged 52) <br /> Stratford-upon-Avon, Warwickshire, England</td>
+			</tr>
+			<tr>
+		  		<td>Description</td>
+		  		<td>William Shakespeare was an English poet, playwright, and actor, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet, and the "Bard of Avon".</td>
+			</tr>
+			<tr>
+		  		<td>Wikipedia</td>
+		  		<td><a href="https://en.wikipedia.org/wiki/William_Shakespeare">William Shakespeare</a></td>
+			</tr>
+			<tr>
+		  		<td>Image</td>
+		  		<td><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/220px-Shakespeare.jpg"></td>
+			</tr>
+			<tr>
+		  		<td>Books</td>
+		  		<td><ul>
+					<li><a href="{{url_for('romeo')}}">Romeo and Juliet</a></li>			
+				</ul></td>
+			</tr>
 
-		<p>Books</p>
-		<a href="{{url_for('romeo')}}">Romeo and Juliet</a>
+    </table>
 	</body>
 </html>
 <!-- end of shakespeare.html -->

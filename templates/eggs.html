@@ -2,13 +2,47 @@
 	<head>
 	Green Eggs and Ham
 	</head>
+	<hr />
 	<body>
-		<p>Author</p>
-		<a href="{{url_for('seuss')}}">Dr. Seuss</a>
+		<table> 
+			<tr>     <!-- Row tags: <tr> </tr> -->
+		  		<td>Name</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
+		  		<td>Green Eggs and Ham</td>
+			</tr>
+			<tr>
+		  		<td>Google ID</td>
+		  		<td>gvKpPwAACAAJ</td>
+			</tr>
+			<tr>
+		  		<td>ISBN</td>
+		  		<td>0679891293</td>
+			</tr>
+			<tr>
+		  		<td>Publication Date</td>
+		  		<td>1998-10-01</td>
+			</tr>			
+			<tr>
+		  		<td>Description</td>
+		  		<td>Sam-I-Am tries to persuade his friend to try green eggs and ham."</td>			
+			</tr>
+			<tr>
+		  		<td>Image</td>
+		  		<td><img src="https://books.google.com/books/content/images/frontcover/gvKpPwAACAAJ?fife=w500"></td>
+			</tr>
+			<tr>
+		  		<td>Author</td>
+		  		<td><a href="{{url_for('seuss')}}">Dr. Seuss</a></td>
+			</tr>
 
-		<p>Publisher</p>
-		<a href="{{url_for('randomhouse')}}">Random House</a>
+			<tr>
+		  		<td>Publisher</td>
+		  		<td><a href="{{url_for('randomhouse')}}">Random House</a></td>
+			</tr>
+
+    </table>
 	</body>
 </html>
 <!-- end of eggs.html -->
+
+
 

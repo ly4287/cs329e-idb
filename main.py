@@ -6,7 +6,7 @@
 
 
 from flask import Flask, render_template
-
+from flask_sqlalchemy import SQLAlchemy
 
 
 # create a flask object (flask needs an object to represent the application)

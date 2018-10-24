@@ -1,42 +1,49 @@
 import json
+##from model import Books, Authors, Publishers
 
 book_data = json.load(open('books.json'))
 
-book_ids = {}
+key = 0
+for line in book_data:
+    try:
+        id = book_data[key]['google_id']
+        title = book_data[key]['title']
+        isbn = book_data[key]['isbn']
+        pub_date = book_data[key]['publication_date']
+        image_url = book_data[key]['image_url']
+        description = book_data[key]['description']
+        publishers = book_data[key]['publishers']
+    except KeyError:
+        pass
+    key += 1
+    print(publishers)
+    break
 
-first_dict_idx = 3
-while first_dict_idx < 10:
-    first_author_number = book_data[first_dict_idx]['google_id']
-    first_author_number2 = book_data[first_dict_idx]['title']
-    first_author_number3 = book_data[first_dict_idx]['isbn']
-    first_author_number4 = book_data[first_dict_idx]['publication_date']
-    first_author_number5 = book_data[first_dict_idx]['image_url']
-    first_author_number6 = book_data[first_dict_idx]['description']
-    first_dict_idx += 1
+##first_dict_idx = 0
+##while first_dict_idx < len(book_data):
+##    first_author_number = book_data[first_dict_idx]['google_id']
+##    first_author_number2 = book_data[first_dict_idx]['title']
+##    first_author_number3 = book_data[first_dict_idx]['isbn']
+##    first_author_number4 = book_data[first_dict_idx]['publication_date']
+##    first_author_number5 = book_data[first_dict_idx]['image_url']
+##    first_author_number6 = book_data[first_dict_idx]['description']
+##    first_dict_idx += 1
     
 
-print(first_author_number)
-print(first_author_number2)
-print(first_author_number3)
-print(first_author_number4)
-print(first_author_number5)
-print(first_author_number6)
 
 
+##for key in info:
+##    key = 0
+##    for info in book_data:
+##        id = book_data['google_id']
+##        title = book_data[key]['title']
+##        isbn = book_data[key]['isbn']
+##        pub_date = book_data[key]['publication_date']
+##        image_url = book_data[key]['image_url']
+##        description = book_data[key]['description']
+##    print(id)
+##
 
-##for key in book_data:
-##    info = book_data[key]
-##    for book_data in book:
-##        format_book = book_ids(
-##            id = info['google_id'],
-##            title = info['title'],
-##            isbn = info['isbn'],
-##            pub_date = info['publication_date'],
-##            image_url = info['image_url'],
-##        description = info['description'])
-##    session.merge(format_book)
-
-##print(format_book)
     
 
     

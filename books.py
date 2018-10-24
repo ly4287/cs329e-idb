@@ -3,6 +3,8 @@ import json
 
 book_data = json.load(open('books.json'))
 
+
+publishers2 = []
 key = 0
 for line in book_data:
     try:
@@ -13,11 +15,47 @@ for line in book_data:
         image_url = book_data[key]['image_url']
         description = book_data[key]['description']
         publishers = book_data[key]['publishers']
+        authors = book_data[key]['authors']
+##        for line2 in publishers:
+##            try:
+##                founded = publishers[key2]['founded']
+##            except NameError:
+##                pass
     except KeyError:
         pass
     key += 1
-    print(publishers)
-    break
+
+print(publishers)
+
+key2 = 0
+for line2 in publishers:
+    try:
+        founded = publishers[key2]['founded']
+        name = publishers[key2]['name']
+        location = publishers[key2]['location']
+        wiki = publishers[key2]['wikipedia_url']
+        description2 = publishers[key2]['description']
+        company = publishers[key2]['parent company']
+        website = publishers[key2]['website']
+    except KeyError:
+        pass
+    key2 += 1
+    print(founded)
+    print(name)
+    print(location)
+    print(wiki)
+
+key3 = 0
+for line3 in authors:
+    try:
+        born = authors[key3]['born']
+        name = authors[key3]['name']
+        nationality = authors[key3]['nationality']
+        description3 = authors[key3]['description']
+        alma = authors[key3]['alma_mater']
+        wiki2 = authors[key3]['wikipedia_url']
+        image = authors[key3]['image_url']
+        
 
 ##first_dict_idx = 0
 ##while first_dict_idx < len(book_data):

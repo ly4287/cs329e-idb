@@ -58,8 +58,8 @@ def jkrowling():
     return render_template('jkrowling.html')
 
 @app.route('/seuss/')
-def suess():
-    return render_template('suess.html')
+def seuss():
+    return render_template('seuss.html')
 
 @app.route('/shakespeare/')
 def shakespeare():
@@ -84,6 +84,7 @@ def barrons():
 # the code, app.run(), will not be executed
 
 if __name__ == "__main__":
+    app.debug = True
     app.run('104.248.122.33', '80')
 #----------------------------------------
 # end of main.py

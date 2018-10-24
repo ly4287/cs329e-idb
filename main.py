@@ -6,7 +6,7 @@
 
 
 from flask import Flask, render_template
-
+from flask_sqlalchemy import SQLAlchemy
 
 
 # create a flask object (flask needs an object to represent the application)
@@ -25,9 +25,57 @@ app = Flask(__name__)
 def index():
     return render_template('hello.html')
 
-@app.route('/book/')
-def book():
-    return render_template('book.html')
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+
+@app.route('/books/')
+def books():
+    return render_template('books.html')
+
+@app.route('/authors/')
+def authors():
+    return render_template('authors.html')
+
+@app.route('/publishers/')
+def publishers():
+    return render_template('publishers.html')
+
+@app.route('/harrypotter/')
+def harrypotter():
+    return render_template('harrypotter.html')
+
+@app.route('/eggs/')
+def eggs():
+    return render_template('eggs.html')
+
+@app.route('/romeo/')
+def romeo():
+    return render_template('romeo.html')
+
+@app.route('/jkrowling/')
+def jkrowling():
+    return render_template('jkrowling.html')
+
+@app.route('/seuss/')
+def seuss():
+    return render_template('seuss.html')
+
+@app.route('/shakespeare/')
+def shakespeare():
+    return render_template('shakespeare.html')
+
+@app.route('/pottermore/')
+def pottermore():
+    return render_template('pottermore.html')
+
+@app.route('/randomhouse/')
+def randomhouse():
+    return render_template('randomhouse.html')
+
+@app.route('/barrons/')
+def barrons():
+    return render_template('barrons.html')
 
 
 # if main.py is run directly, i.e., as the main module, it will be assigned the value main
@@ -36,6 +84,7 @@ def book():
 # the code, app.run(), will not be executed
 
 if __name__ == "__main__":
+    app.debug = True
     app.run('104.248.122.33', '80')
 #----------------------------------------
 # end of main.py

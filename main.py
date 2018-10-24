@@ -85,6 +85,10 @@ def barrons():
 
 if __name__ == "__main__":
     app.debug = True
+
+    #leave this line so lydia can run the website on her UTCS machine thanks
+    #app.run(host='128.83.139.95')
+
     app.run('104.248.122.33', '80')
 #----------------------------------------
 # end of main.py

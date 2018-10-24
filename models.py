@@ -31,12 +31,10 @@ class Authors(Base):
 
 class Publishers(Base):
     __tablename__ = 'publishers'
-    name = db.Column(db.String(), primary_key = True, nullable = False)
     wikipedia_url = db.Column(db.String(), nullable = False)
+    name = db.Column(db.String(), primary_key = True, nullable = False)
     description = db.Column(db.String(), nullable = False)
     owner = db.Column(db.String(), nullable = False)
-    founded = db.Column(db.String(), nullable = False)
-    location = db.Column(db.String(), nullable = False)
     image_url = db.Column(db.String(), nullable = False)
     website = db.Column(db.String(), nullable = False)
     def __repr__(self):

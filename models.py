@@ -15,7 +15,6 @@ class Books(Base):
     publication_date = db.Column(db.String(), nullable = False)
     image_url = db.Column(db.String(), nullable = False)
     description = db.Column(db.String(), nullable = False)
-    digest = db.Column(db.String(), nullable = False)
 
 class Authors(Base):
     __tablename__ = 'authors'
@@ -40,6 +39,5 @@ class Publishers(Base):
     location = db.Column(db.String(), nullable = False)
     image_url = db.Column(db.String(), nullable = False)
     website = db.Column(db.String(), nullable = False)
-
     def __repr__(self):
         return self.name

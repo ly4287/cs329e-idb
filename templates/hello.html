@@ -1,17 +1,190 @@
-<html>
-	<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	</head>
-	<body>
-		<p>Hello World!</p><br>
-		<a href="/about">About Us</a><br>
-		<a href="{{url_for('authors')}}">Authors</a><br>
-		<a href="/books">Books</a><br>
-		<a href="/publishers">Publishers</a><br>
-	</body>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CS329E</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="{{url_for('index')}}">Home</a></li>
+        <li><a href="{{url_for('index')}}">Authors</a></li>
+        <li><a href="{{url_for('index')}}">Publishers</a></li>
+        <li><a href="{{url_for('index')}}">About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  <div class="container text-center">
+      <h3>WELCOME TO THE BOOK DATABASE</h3>
+      <p><em>We love books!</em></p>
+    <div>
+
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="{{ url_for('static',filename='images/authors.jpg') }}">
+      <div class="carousel-caption">
+        <h3>Meet the Author</h3>
+        <p>Learn more about the famous J.K. Rowling.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{ url_for('static',filename='images/books.jpg') }}">
+      <div class="carousel-caption">
+        <h3>Books</h3>
+        <p>We have a huge database of books.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{ url_for('static',filename='images/publishers.png') }}">
+      <div class="carousel-caption">
+        <h3>Publishers</h3>
+        <p>Learn more about different publishers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container text-center">
+  <h3>THE GANG</h3>
+  <p>We have created a fictional database for books.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Josh</strong></p><br>
+      <img src="{{ url_for('static',filename='images/Josh.jpg') }}"width="250" height="300">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Sai</strong></p><br>
+      <img src="{{ url_for('static',filename='images/sai.png') }}"width="250" height="300">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Lydia</strong></p><br>
+      <img src="{{ url_for('static',filename='images/lydia.jpg') }}"width="300" height="300">
+    </div>
+  </div>
+  <div class="row">
+    <br>
+    <div class="col-sm-4">
+      <p><strong>Patrick</strong></p><br>
+      <img src="{{ url_for('static',filename='images/patrick.jpg') }}"width="300" height="300">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>The One and Only Paul</strong></p><br>
+      <img src="{{ url_for('static',filename='images/paul.jpg') }}"width="250" height="300">
+    </div>
+  </div>
+</div>
+
+
+      <div class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
+  <div class="row test">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Austin, TX</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +512-140-2360</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: thebookproject@utexas.edu</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<style>
+/* Add a dark background color to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+</style>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Books galore!</a></p>
+  <p>Data provided by Fraij. Updated November 2018</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
 </html>
-<!-- end of hello.html --> 

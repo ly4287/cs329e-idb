@@ -11,31 +11,32 @@ db = SQLAlchemy()
 class Books(Base):
     __tablename__ = 'books'
     google_id = db.Column(db.String(), primary_key = True, nullable = False)
-    title = db.Column(db.String(), unique=True, nullable = False)
-    publication_date = db.Column(db.String(), nullable = False)
-    image_url = db.Column(db.String(), nullable = False)
-    description = db.Column(db.String(), nullable = False)
+    title = db.Column(db.String(), unique=True)
+    publication_date = db.Column(db.String())
+    image_url = db.Column(db.String())
+    description = db.Column(db.String())
 
 class Authors(Base):
     __tablename__ = 'authors'
-    born = db.Column(db.String(), nullable = False)
+    born = db.Column(db.String())
     name = db.Column(db.String(), primary_key = True, nullable = False)
-    education = db.Column(db.String(), nullable = False)
-    nationality = db.Column(db.String(), nullable = False)
-    description = db.Column(db.String(), nullable = False)
-    alma_mater = db.Column(db.String(), nullable = False)
-    wikipedia_url = db.Column(db.String(), nullable = False)
-    image_url = db.Column(db.String(), nullable = False)
+    education = db.Column(db.String())
+    nationality = db.Column(db.String())
+    description = db.Column(db.String())
+    alma_mater = db.Column(db.String())
+    wikipedia_url = db.Column(db.String())
+    died = db.Column(db.String())
+    image_url = db.Column(db.String())
     def __repr__(self):
         return self.name
 
 class Publishers(Base):
     __tablename__ = 'publishers'
-    wikipedia_url = db.Column(db.String(), nullable = False)
+    wikipedia_url = db.Column(db.String())
     name = db.Column(db.String(), primary_key = True, nullable = False)
-    description = db.Column(db.String(), nullable = False)
-    owner = db.Column(db.String(), nullable = False)
-    image_url = db.Column(db.String(), nullable = False)
-    website = db.Column(db.String(), nullable = False)
+    description = db.Column(db.String())
+    owner = db.Column(db.String())
+    image_url = db.Column(db.String())
+    website = db.Column(db.String())
     def __repr__(self):
         return self.name

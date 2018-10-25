@@ -57,9 +57,10 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="{{url_for('index')}}">Home</a></li>
-        <li><a href="{{url_for('index')}}">Authors</a></li>
-        <li><a href="{{url_for('index')}}">Publishers</a></li>
-        <li><a href="{{url_for('index')}}">About Us</a></li>
+        <li><a href="{{url_for('about')}}">About Us</a></li>
+        <li><a href="{{url_for('authors')}}">Authors</a></li>
+        <li><a href="{{url_for('publishers')}}">Publishers</a></li>
+        <li><a href="{{url_for('books')}}">Books</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -131,35 +132,38 @@
 
 
 <div class="container text-center">
-  <h3>THE GANG</h3>
+<br>
   <p>We have created a fictional database for books.</p>
   <br>
+  <h3>THE GANG</h3>
   <div class="row">
     <div class="col-sm-4">
-      <p><strong>Josh</strong></p><br>
+      <p><strong>Josh</strong></p>
       <img src="{{ url_for('static',filename='images/Josh.jpg') }}"width="250" height="300">
-    </div>
+    </div><br>
     <div class="col-sm-4">
-      <p><strong>Sai</strong></p><br>
+      <p><strong>Sai</strong></p>
       <img src="{{ url_for('static',filename='images/sai.png') }}"width="250" height="300">
-    </div>
+    </div><br>
     <div class="col-sm-4">
-      <p><strong>Lydia</strong></p><br>
+      <p><strong>Lydia</strong></p>
       <img src="{{ url_for('static',filename='images/lydia.jpg') }}"width="300" height="300">
-    </div>
+    </div><br>
   </div>
   <div class="row">
     <br>
     <div class="col-sm-4">
-      <p><strong>Patrick</strong></p><br>
+      <p><strong>Patrick</strong></p>
       <img src="{{ url_for('static',filename='images/patrick.jpg') }}"width="300" height="300">
-    </div>
+    </div><br>
     <div class="col-sm-4">
-      <p><strong>The One and Only Paul</strong></p><br>
+      <p><strong>The One and Only Paul</strong></p>
       <img src="{{ url_for('static',filename='images/paul.jpg') }}"width="250" height="300">
     </div>
   </div>
 </div>
+<hr/>
+<br>
 
 
       <div class="container">
@@ -184,7 +188,9 @@
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
       <div class="row">
         <div class="col-md-12 form-group">
+<br>
           <button class="btn pull-right" type="submit">Send</button>
+<br>
         </div>
       </div>
     </div>

@@ -41,6 +41,12 @@ def authors():
 def publishers():
     return render_template('publishers.html')
 
+#@app.route('/book/<some_book>/')
+@app.route('/book/some_book/')
+def some_book():
+    return render_template('some_book.html')
+
+
 @app.route('/harrypotter/')
 def harrypotter():
     return render_template('harrypotter.html')
@@ -87,9 +93,9 @@ if __name__ == "__main__":
     app.debug = True
 
     #leave this line so lydia can run the website on her UTCS machine thanks
-    #app.run(host='128.83.139.95')
+    app.run(host='128.83.139.95')
 
-    app.run('104.248.122.33', '80')
+    #app.run('104.248.122.33', '80')
 #----------------------------------------
 # end of main.py
 #----------------------------------------

@@ -1,0 +1,52 @@
+<html>
+	<head>
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">	
+	</head>
+	<hr />
+	<body>
+		<table> 
+			<tr>     <!-- Row tags: <tr> </tr> -->
+		  		<td>Title</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
+		  		<td>{{ title }}</td>
+			</tr>
+			<tr>
+		  		<td>Google ID</td>
+		  		<td>{{ gooogle_id }}</td>
+			</tr>
+			<tr>
+		  		<td>ISBN</td>
+		  		<td>{{ isbn }}</td>
+			</tr>
+			<tr>
+		  		<td>Publication Date</td>
+		  		<td>{{ publication_date }}</td>
+			</tr>
+			<tr>
+		  		<td>Description</td>
+		  		<td>{{ description }}
+			</tr>
+			<tr>
+		  		<td>Image</td>
+		  		<td><img src={{ image_url }}></td>
+			</tr>
+			<tr>
+		  		<td>Author</td>
+		  		<td><a href="{{url_for('jkrowling')}}">{{ author }}</a></td>
+			</tr>
+			<tr>
+		  		<td>Publisher</td>
+		  		<td><a href="{{url_for('pottermore')}}">{{ publisher }}</a></td>
+			</tr>
+
+
+    </table>
+		<hr/>	
+			<a href="{{url_for('index')}}">Main Menu</a>
+
+	</body>
+</html>
+

@@ -1,3 +1,6 @@
+{% import json %}
+{% book_data = json.load(open('books.json')) %}
+
 <html>
 	<head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,7 +17,9 @@
 				<div class="col-md-4"><a href="{{url_for('eggs')}}">Green Eggs and Ham</div>
 				<div class="col-md-4"><a href="{{url_for('romeo')}}">Romeo and Juliet</div>
 				<div class="col-md-4"><a href="{{url_for('some_book',title="Harry Potter and the Sorcerer's Stone")}}">Some book</div>
- 
+## 				{% for i in book_data %}
+##			 		<div class="col-md-4"><a href="{{url_for('some_book',title=i["title"])}}">{{ i["title"] }}</div>
+##				{% endfor %}	
 		</div>
 		<hr/>	
 			<a href="{{url_for('index')}}">Main Menu</a>

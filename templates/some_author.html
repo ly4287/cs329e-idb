@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<title>{{ name }}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+	
+	</head>
+	<hr />
+	<body>
+		<table> 
+			<tr>     <!-- Row tags: <tr> </tr> -->
+		  		<td>Name</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
+		  		<td>{{ name }}</td>
+			</tr>
+			<tr>
+		  		<td>Born</td>
+		  		<td>{{ born }}</td>
+			</tr>
+			<tr>
+		  		<td>Education</td>
+		  		<td>{{ education }}</td>
+			</tr>
+			<tr>
+		  		<td>Nationality</td>
+		  		<td>{{ nationality }}</td>
+			</tr>
+			<tr>
+		  		<td>Alma Mater</td>
+		  		<td>{{ alma_mater }}</td>
+			</tr>
+			<tr>
+		  		<td>Description</td>
+		  		<td>{{ description }}</td>
+			</tr>
+			<tr>
+		  		<td>Wikipedia</td>
+		  		<td><a href={{ wikipedia_url }}>{{ name }}</a></td>
+			</tr>
+			<tr>
+		  		<td>Image</td>
+		  		<td><img src={{ image_url }}></td>
+			</tr>
+			<tr>
+		  		<td>Books</td>
+		  		<td><ul>
+					<li><a href="{{url_for('harrypotter')}}">Harry Potter and the Sorcerer's Stone</a></li>			
+				</ul></td>
+			</tr>
+
+    </table>
+		<hr/>	
+			<a href="{{url_for('index')}}">Main Menu</a>
+
+	</body>
+</html>
+
+

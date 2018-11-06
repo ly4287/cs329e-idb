@@ -35,13 +35,12 @@
 			</tr>
 			<tr>
 		  		<td>Author</td>
-		  		<td><a href="{{url_for('jkrowling')}}">{{ author }}</a></td>
+		  		<td><a href="{{url_for('some_author',name = author)}}">{{ author }}</a></td>
 			</tr>
 			<tr>
 		  		<td>Publisher</td>
-		  		<td><a href="{{url_for('pottermore')}}">{{ publisher }}</a></td>
+		  		<td><a href="{{url_for('some_publisher',name = publisher)}}">{{ publisher }}</a></td>
 			</tr>
-
 
     </table>
 		<hr/>	

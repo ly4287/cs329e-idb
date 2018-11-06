@@ -41,10 +41,22 @@ def authors():
 def publishers():
     return render_template('publishers.html')
 
-#@app.route('/book/<some_book>/')
-@app.route('/book/some_book/')
-def some_book():
-    return render_template('some_book.html')
+@app.route('/book/<title>/')
+def some_book(title = "Harry Potter",google_id="alskdfj",isbn="alskdjf",publication_date="laskjdf",description="laskdjf",image_url="https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500",author="alskdjf",publisher="alskdfj"):
+    return render_template('some_book.html',title = title,google_id=google_id,isbn=isbn,publication_date=publication_date,description=description,image=image)
+
+@app.route('/authors/<name>/')
+def some_author(name="JK Rowling",born = None, education = "alskdjfla",nationality="alskdf",alma_mater="laksd",description="laksd",wikipedia_url="llaskdjf",image_url="slkdjf"):
+    return render_template('some_author.html',name=name, born=born,education=education,nationality=nationality,alma_mater=alma_mater,description=description,wikipedia_url=wikipedia_url,image_url=image_url)
+
+@app.route('/publishers/<name>')
+def some_publisher(name="Pottermore",owner="laskdjf",description="laskdjf",wikipedia_url="alskdjf",image_url="laskdfj",website="alskdfj"):
+    return render_template('some_publisher.html',name=name,owner=owner,description=description,wikipedia_url=wikipedia_url,image_url=image_url,website=website)
+
+
+
+
+
 
 
 @app.route('/harrypotter/')

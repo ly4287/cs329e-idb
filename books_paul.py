@@ -2,6 +2,7 @@ import json
 ##from model import Books, Authors, Publishers
 
 book_data = json.load(open('books.json'))
+print(book_data)
 
 
 publishers2 = []
@@ -88,5 +89,3 @@ for line3 in authors:
 ##def get_obj(row):
 ##    return {
 ##        'id' : row.id,
-        
-      

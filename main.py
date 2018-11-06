@@ -7,6 +7,10 @@
 
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+import json
+
+
+book_data = json.load(open('books.json'))
 
 
 # create a flask object (flask needs an object to represent the application)
@@ -42,16 +46,44 @@ def publishers():
     return render_template('publishers.html')
 
 @app.route('/book/<title>/')
-def some_book(title = "Harry Potter",google_id="alskdfj",isbn="alskdjf",publication_date="laskjdf",description="laskdjf",image_url="https://books.google.com/books/content/images/frontcover/wrOQLV6xB-wC?fife=w500",author="alskdjf",publisher="alskdfj"):
-    return render_template('some_book.html',title = title,google_id=google_id,isbn=isbn,publication_date=publication_date,description=description,image=image)
+def some_book(title):
+	for i in book_data:
+		if i["title"] == title:
+			title = i["title"]
+			google_id=i["google_id"]
+			isbn=i["isbn"]
+			publication_date=i["publication_date"]
+			image_url=i["image_url"]
+			description=i["description"]
+	return render_template('some_book.html',title = title,google_id=google_id,isbn=isbn,publication_date=publication_date,description=description,image_url=image_url)
 
 @app.route('/authors/<name>/')
-def some_author(name="JK Rowling",born = None, education = "alskdjfla",nationality="alskdf",alma_mater="laksd",description="laksd",wikipedia_url="llaskdjf",image_url="slkdjf"):
-    return render_template('some_author.html',name=name, born=born,education=education,nationality=nationality,alma_mater=alma_mater,description=description,wikipedia_url=wikipedia_url,image_url=image_url)
+def some_author(name):
+	for i in book_data:
+		for j in range(len(i["authors"])):
+			if i["authors"][j]["name"] == name:
+				name = i["authors"][j]["name"]
+				born = i["authors"][j]["born"]
+				education = i["authors"][j]["education"]
+				nationality=i["authors"][j]["nationality"]
+				alma_mater=i["authors"][j]["alma_mater"]
+				wikipedia_url=i["authors"][j]["wikipedia_url"]
+				description = i["authors"][j]["description"]
+				image_url = i["authors"][j]["image_url"]
+	return render_template('some_author.html',name=name, born=born,education=education,nationality=nationality,alma_mater=alma_mater,description=description,wikipedia_url=wikipedia_url,image_url=image_url)
 
 @app.route('/publishers/<name>')
-def some_publisher(name="Pottermore",owner="laskdjf",description="laskdjf",wikipedia_url="alskdjf",image_url="laskdfj",website="alskdfj"):
-    return render_template('some_publisher.html',name=name,owner=owner,description=description,wikipedia_url=wikipedia_url,image_url=image_url,website=website)
+def some_publisher(name):
+	for i in book_data:
+		for j in range(len(i["publishers"])):
+			if i["publishers"][j]["name"] == name:
+				name = i["publishers"][j]["name"]
+				owner = i["publishers"][j]["owner"]
+				website = i["publishers"][j]["website"]
+				wikipedia_url=i["publishers"][j]["wikipedia_url"]
+				description = i["publishers"][j]["description"]
+				image_url = i["publishers"][j]["image_url"]
+	return render_template('some_publisher.html',name=name,owner=owner,description=description,wikipedia_url=wikipedia_url,image_url=image_url,website=website)
 
 
 

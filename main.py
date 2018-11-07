@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 
 
-book_data = json.load(open('books.json'))
+#book_data = json.load(open('books.json'))
 
 
 # create a flask object (flask needs an object to represent the application)

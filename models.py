@@ -3,13 +3,13 @@
 # from sqlalchemy.orm import relationship,sessionmaker
 # from sqlalchemy.ext.declarative import declarative_base
 # from sqlalchemy import create_engine
-
-import sys
-import os
 #from sqlalchemy import Column, ForeignKey, Integer, String
 #from sqlalchemy.ext.declarative import declarative_base 
 #from sqlalchemy.orm import relationship
 #from sqlalchemy import create_engine
+
+import sys
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -33,21 +33,21 @@ class Book(db.Model):
     description = db.Column(db.String)
     publisher = db.Column(db.String)
     author = db.Column(db.String)
-'''
-class Author(Base):
+
+class Author(db.Model):
     __tablename__ = 'author'
-    born = Column(String)
-    name = Column(String, primary_key = True, nullable = False)
-    education = Column(String)
-    nationality = Column(String)
-    description = Column(String)
-    alma_mater = Column(String)
-    wikipedia_url = Column(String)
-    died = Column(String, nullable = True)
-    image_url = Column(String)
+    born = db.Column(db.String)
+    name = db.Column(db.String, primary_key = True, nullable = False)
+    education = db.Column(db.String)
+    nationality = db.Column(db.String)
+    description = db.Column(db.String)
+    alma_mater = db.Column(db.String)
+    wikipedia_url = db.Column(db.String)
+    died = db.Column(db.String, nullable = True)
+    image_url = db.Column(db.String)
     def __repr__(self):
         return self.name
-
+'''
 class Publisher(Base):
     __tablename__ = 'publisher'
     wikipedia_url = Column(String)
@@ -59,7 +59,9 @@ class Publisher(Base):
     def __repr__(self):
         return self.name
 '''
-#db.drop_all()
+
 db.create_all()
+
+#db.drop_all()
 #Base.metadata.drop_all(engine)
 #Base.metadata.create_all(engine)

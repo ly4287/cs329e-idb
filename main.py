@@ -34,12 +34,12 @@ def about():
 
 @app.route('/books/')
 def books():
-	books = session.query(Book).all()
-	return render_template('books.html', books = books)
+    books = session.query(Book).all()
+    return render_template('books.html', books = books)
 
 @app.route('/authors/')
 def authors():
-	authors = session.query(Author).all()
+    authors = session.query(Author).all()
     return render_template('authors.html', authors = authors)
 
 @app.route('/publishers/')

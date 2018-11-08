@@ -11,19 +11,16 @@
 			<h1>Books</h1>
 			<p class = "lead">"Discover a world of new books!" </p>
 			<div class = "row">
-				<div class="col-md-4"><a href="{{url_for('harrypotter')}}">Harry Potter and the Sorcerer's Stone</div>
-				<div class="col-md-4"><a href="{{url_for('eggs')}}">Green Eggs and Ham</div>
-				<div class="col-md-4"><a href="{{url_for('romeo')}}">Romeo and Juliet</div>
-				<div class="col-md-4"><a href="{{url_for('some_book',title="Harry Potter and the Sorcerer Stone")}}">Some book</div>
  				{% if books == []  %}
 					<p>no books in database</p>
 				{% else %}
 					{% for i in books %}
-						<div>
-							{{i.title}}
-							<br></br>
+						<div class="col-md-4">
+							{{ i.title }}
+						</div>
 					{% endfor %}
 				{% endif %}
+			</div>
 		</div>
 		<hr/>
 			<a href="{{url_for('index')}}">Main Menu</a>

@@ -25,11 +25,14 @@ db = SQLAlchemy(app)
 
 class Book(db.Model):
     __tablename__ = 'book'
-    google_id = db.Column(db.Integer, primary_key = True)
+    google_id = db.Column(db.String, primary_key = True)
     title = db.Column(db.String, unique=True)
+    isbn = db.Column(db.String)
     publication_date = db.Column(db.String)
     image_url = db.Column(db.String)
     description = db.Column(db.String)
+    publisher = db.Column(db.String)
+    author = db.Column(db.String)
 '''
 class Author(Base):
     __tablename__ = 'author'
@@ -56,7 +59,7 @@ class Publisher(Base):
     def __repr__(self):
         return self.name
 '''
-db.drop_all()
+#db.drop_all()
 db.create_all()
 #Base.metadata.drop_all(engine)
 #Base.metadata.create_all(engine)

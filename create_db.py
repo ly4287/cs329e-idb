@@ -1,3 +1,4 @@
+import psycopg2
 import json, logging 
 from sqlalchemy.orm import sessionmaker
 #from models import Base, Book, Author, Publisher, engine
@@ -5,6 +6,9 @@ from models import db, Book
 #Base.metadata.bind = engine
 #DBSession = sessionmaker(bind=engine)
 #session = DBSession()
+
+conn = psycopg2.connect(host="localhost", database="bookdb", user="patrick", password="sqlRAGTAG", port="5432")
+cursor = conn.cursor()
 
 def load_json(filename):
     with open(filename) as file:
@@ -15,6 +19,7 @@ def load_json(filename):
 def create_books():
     book = load_json('books.json')
     counter = 0
+    dupe = False
     for oneBook in book:
         title = oneBook['title']
         g_id = oneBook['google_id']
@@ -40,12 +45,23 @@ def create_books():
         authors_attribute = oneBook['authors']
         for j in authors_attribute:
             author = j['name']
-        newBook = Book(title = title, google_id = g_id, isbn = idbn_, image_url = img_url, publication_date = pub_date, description = desc, author = author, publisher = publisher, id = counter)
-        # After I create the book, I can then add it to my session. 
-        db.session.add(newBook)
-        # commit the session to my DB.
-        db.session.commit()
-        counter += 1
+        newBook = Book(title = title, google_id = g_id, isbn = isbn_, image_url = img_url, publication_date = pub_date, description = desc, author = author, publisher = publisher)
+	cursor.execute("SELECT google_id FROM book")
+	rows = cursor.fetchall()
+	for row in rows:
+		if g_id in row:
+			dupe = True
+			continue
+	if(not dupe):
+        	# After I create the book, I can then add it to my session. 
+        	db.session.add(newBook)
+        	# commit the session to my DB.
+        	db.session.commit()
+        	counter += 1
+		print("we added a book into the DB! it was: "+title)
+	else:
+		print("there was a dupe!")
+
 '''
 def create_authors():
     book = load_json('books.json')
@@ -134,5 +150,6 @@ def create_publishers():
             counter += 1
 '''
 create_books()
+cursor.close()
 #create_authors()
 #create_publishers()

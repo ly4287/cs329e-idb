@@ -107,19 +107,19 @@ def create_authors():
                 img_url = j['image_url']
             except:
                 img_url = "None"
-        newAuthor =  Author(name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url, publisher = publisher)
-	cursor.execute("SELECT name FROM author")
-	rows = cursor.fetchall()
-	for row in rows:
+            newAuthor =  Author(name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url, publisher = publisher)
+	    cursor.execute("SELECT name FROM author")
+	    rows = cursor.fetchall()
+	    for row in rows:
 		if author in row:
 			dupe = True
 			continue
-	if(not dupe):
+	    if(not dupe):
 		db.session.add(newAuthor)
 		db.session.commit()
 		counter += 1
 		print("we added an author into the DB! it was: "+author)
-	else:
+	    else:
 		print("there was a dupe!")
 '''
         if session.query(Authors).filter(Authors.name == newAuthor.name).count() == 0: 

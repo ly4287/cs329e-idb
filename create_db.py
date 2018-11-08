@@ -122,7 +122,8 @@ def create_authors():
 		print("we added an author into the DB! it was: "+author)
 	else:
 		print("there was a dupe!")
-        
+        dupe = False
+        #
 '''
         if session.query(Authors).filter(Authors.name == newAuthor.name).count() == 0: 
             db.session.add(newAuthor)

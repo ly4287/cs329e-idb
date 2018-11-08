@@ -1,9 +1,10 @@
 import json, logging 
 from sqlalchemy.orm import sessionmaker
-from models import Base, Book, Author, Publisher, engine
-Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
+#from models import Base, Book, Author, Publisher, engine
+from models import db, Book
+#Base.metadata.bind = engine
+#DBSession = sessionmaker(bind=engine)
+#session = DBSession()
 
 def load_json(filename):
     with open(filename) as file:
@@ -45,7 +46,7 @@ def create_books():
         # commit the session to my DB.
         db.session.commit()
         counter += 1
-
+'''
 def create_authors():
     book = load_json('books.json')
     counter = 0
@@ -131,7 +132,7 @@ def create_publishers():
             session.add(newPublisher)
             session.commit()
             counter += 1
-
+'''
 create_books()
-create_authors()
-create_publishers()
+#create_authors()
+#create_publishers()

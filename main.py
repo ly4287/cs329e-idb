@@ -8,6 +8,7 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 import json
+from models import app, db, Book
 
 
 #book_data = json.load(open('books.json'))
@@ -15,7 +16,8 @@ import json
 
 # create a flask object (flask needs an object to represent the application)
 
-app = Flask(__name__)
+#app = Flask(__name__)
+# we move this to models.py
 
 
 # The route decorator '@app.route()' maps a function to a route on your website.
@@ -34,7 +36,7 @@ def about():
 
 @app.route('/books/')
 def books():
-    books = session.query(Book).all()
+    books = db.session.query(Book).all()
     return render_template('books.html', books = books)
 
 @app.route('/authors/')

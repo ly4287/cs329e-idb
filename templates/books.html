@@ -15,7 +15,7 @@
 					<p>no books in database</p>
 				{% else %}
 					{% for i in books %}
-						<div class="col-md-4"><a href="{{url_for('some_book',title=i.title)}}">{{ i.title }}</div>					
+						<div class="col-md-4"><a href="{{url_for('some_book',title={{ i.title }})}}">{{ i.title }}</div>					
 					{% endfor %}
 				{% endif %}
 			</div>

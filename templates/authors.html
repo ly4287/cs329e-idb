@@ -10,11 +10,17 @@
 			<h1>Authors</h1>
 			<p class = "lead">"Discover a world of new authors!" </p>
 			<div class = "row">
-				<div class="col-md-4"><a href="{{url_for('jkrowling')}}">J.K. Rowling</div>
-				<div class="col-md-4"><a href="{{url_for('seuss')}}">Dr. Seuss</div>
-				<div class="col-md-4"><a href="{{url_for('shakespeare')}}">William Shakespeare</div>
-				<div class="col-md-4"><a href="{{url_for('some_author',name="J. K. Rowling")}}">Some author</div>
-		
+				{% if authors == []  %}
+					<p>no authors in database</p>
+				{% else %}
+					{% for i in authors %}
+						<div class="col-md-4">
+							{{i.name}}
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+
 		</div>
 		<div>
 			<a href="{{url_for('index')}}">Main Menu</a>

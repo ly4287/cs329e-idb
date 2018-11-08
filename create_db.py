@@ -17,7 +17,7 @@ def create_books():
     for oneBook in book:
         title = oneBook['title']
         g_id = oneBook['google_id']
-		try:
+        try:
             isbn_ = oneBook['isbn']
         except:
             isbn_ = "None"
@@ -107,7 +107,7 @@ def create_publishers():
                 wiki = i['wikipedia_url']
             except:
                 wiki = "None"
-             try:
+            try:
                 desc = i['description']
             except:
                 desc = "None"

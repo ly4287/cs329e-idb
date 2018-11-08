@@ -5,10 +5,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 
 Base = declarative_base()
+# app = Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",'postgres://postgres:asd123@localhost:5432/bookdb')
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+#
 
-db = SQLAlchemy()git p
-
-class Books(Base):
+class Book(Base):
     __tablename__ = 'book'
     google_id = db.Column(db.String(), primary_key = True)
     title = db.Column(db.String(), unique=True)
@@ -16,7 +19,7 @@ class Books(Base):
     image_url = db.Column(db.String())
     description = db.Column(db.String())
 
-class Authors(Base):
+class Author(Base):
     __tablename__ = 'author'
     born = db.Column(db.String())
     name = db.Column(db.String(), primary_key = True, nullable = False)
@@ -30,7 +33,7 @@ class Authors(Base):
     def __repr__(self):
         return self.name
 
-class Publishers(Base):
+class Publisher(Base):
     __tablename__ = 'publisher'
     wikipedia_url = db.Column(db.String())
     name = db.Column(db.String(), primary_key = True, nullable = False)
@@ -40,3 +43,6 @@ class Publishers(Base):
     website = db.Column(db.String())
     def __repr__(self):
         return self.name
+
+db.drop_all()
+db.create_all()

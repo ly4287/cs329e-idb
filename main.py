@@ -8,7 +8,7 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 import json
-from models import app, db, Book
+from models import app, db, Book, Author
 
 
 #book_data = json.load(open('books.json'))
@@ -41,7 +41,7 @@ def books():
 
 @app.route('/authors/')
 def authors():
-    authors = session.query(Author).all()
+    authors = db.session.query(Author).all()
     return render_template('authors.html', authors = authors)
 
 @app.route('/publishers/')

@@ -1,6 +1,7 @@
 # cs329e-idb
 
 Updated as of November 7 11:45pm
+
 Files for server configuration:
 
 1. app.wsgi

@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
 
-SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI','postgres://postgres:patrick@localhost:5432/books')
+SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI','postgres://patrick:password@localhost:5432/books')
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
 
 Base = declarative_base()

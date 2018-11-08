@@ -18,7 +18,6 @@ import json
 app = Flask(__name__)
 
 
-
 # The route decorator '@app.route()' maps a function to a route on your website.
 # decorators are used to map a function, index(), to a web page, / or
 # i.e., when someone types in the home address of the web site,
@@ -35,15 +34,18 @@ def about():
 
 @app.route('/books/')
 def books():
-    return render_template('books.html')
+	books = session.query(Book).all()
+	return render_template('books.html', books = books)
 
 @app.route('/authors/')
 def authors():
-    return render_template('authors.html')
+	authors = session.query(Author).all()
+    return render_template('authors.html', authors = authors)
 
 @app.route('/publishers/')
 def publishers():
-    return render_template('publishers.html')
+    publishers = session.query(Publisher).all()
+    return render_template('publishers.html', publishers = publishers)
 
 @app.route('/book/<title>/')
 def some_book(title):

@@ -1,5 +1,9 @@
-import json
-from models import db, Book, Author, Publisher
+import json, logging 
+from sqlalchemy.orm import sessionmaker
+from models import Base, Book, Author, Publisher, engine
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
 
 def load_json(filename):
     with open(filename) as file:
@@ -9,7 +13,7 @@ def load_json(filename):
 
 def create_books():
     book = load_json('books.json')
-
+    counter = 0
     for oneBook in book:
         title = oneBook['title']
         g_id = oneBook['google_id']
@@ -29,46 +33,105 @@ def create_books():
             desc = oneBook['description']
         except:
             desc = "None"
-        author1 = oneBook['authors']
-        for i in author1:
-            author = i['name']
-        publisher1 = oneBook['publishers']
-        for j in publisher1:
-            pub = j['name']
-        newBook = Book(title = title, google_id = g_id, isbn = idbn_, image_url = img_url, publication_date = pub_date, description = desc, author = author, publisher = pub, val = 0)
+        publishers_attribute = oneBook['publishers']
+        for i in publishers_attribute:
+            publisher = i['name']
+        authors_attribute = oneBook['authors']
+        for j in authors_attribute:
+            author = j['name']
+        newBook = Book(title = title, google_id = g_id, isbn = idbn_, image_url = img_url, publication_date = pub_date, description = desc, author = author, publisher = publisher, id = counter)
         # After I create the book, I can then add it to my session. 
         db.session.add(newBook)
         # commit the session to my DB.
         db.session.commit()
+        counter += 1
 
 def create_authors():
     book = load_json('books.json')
-
-    for oneBook in book['Books']:
+    counter = 0
+    for oneBook in book:
         title = oneBook['title']
-        id = oneBook['id']
-        
-        newBook = Book(title = title, id = id)
-        
-        # After I create the book, I can then add it to my session. 
-        db.session.add(newBook)
-        # commit the session to my DB.
-        db.session.commit()
+        publishers_attribute = oneBook['publishers']
+        for i in publishers_attribute:
+            publisher = i['name']
+        authors_attribute = oneBook['authors']
+        for j in authors_attribute:
+            author = j['name']
+            try:
+                born = j['born']
+            except:
+                born = "None"
+            try:
+                education = j['education']
+            except:
+                education = "None"
+            try:
+                nationality = j['nationality']
+            except:
+                nationality = "None"
+            try:
+                desc = j['description']
+            except:
+                desc = "None"
+            try:
+                alma = j['alma_mater']
+            except:
+                alma = "None"
+            try:
+                wiki = j['wikipedia_url']
+            except:
+                wiki = "None"
+            try: 
+                died = j['died']
+            except:
+                died = "None"
+            try:
+                img_url = j['image_url']
+            except:
+                img_url = "None"
+        newAuthor =  Authors(name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url, title = title, publisher = publisher, id = counter)
+        if session.query(Authors).filter(Authors.name == newAuthor.name).count() == 0: 
+            db.session.add(newAuthor)
+            db.session.commit()
+            counter += 1
         
 def create_publishers():
     book = load_json('books.json')
-
-    for oneBook in book['Books']:
+    counter = 0
+    for oneBook in book:
         title = oneBook['title']
-        id = oneBook['id']
-        
-        newBook = Book(title = title, id = id)
-        
-        # After I create the book, I can then add it to my session. 
-        db.session.add(newBook)
-        # commit the session to my DB.
-        db.session.commit()
-        
+        publishers_attribute = oneBook['publishers'] 
+        for i in publishers_attribute:
+            publisher = i['name']
+            try:
+                wiki = i['wikipedia_url']
+            except:
+                wiki = "None"
+             try:
+                desc = i['description']
+            except:
+                desc = "None"
+            try:
+                owner = i['owner']
+            except:
+                owner = "None"
+            try:
+                img_url = i['image_url']
+            except:
+                img_url = "None"
+            try:
+                website = i['website']
+            except:
+                website = "None"
+        authors_attribute = oneBook['authors']
+        for j in authors_attribute:
+            author = j['name']
+        newPublisher = Publishers(title= title, author = author, name = publisher, wiki_url = wiki, description = desc, owner = owner, image_url = img_url, website = website, id = counter)
+        if session.query(Publishers).filter(Publishers.name == newPublisher.name).count() == 0: 
+            session.add(newPublisher)
+            session.commit()
+            counter += 1
+
 create_books()
 create_authors()
 create_publishers()

@@ -8,14 +8,16 @@
 	</head>
 	<body>
 		<div class = "container-field">
-			<h1>Books</h1>
+			<h1>Books pls</h1>
 			<p class = "lead">"Discover a world of new books!" </p>
 			<div class = "row">
  				{% if books == []  %}
 					<p>no books in database</p>
 				{% else %}
 					{% for i in books %}
-						<div class="col-md-4"><a href="{{url_for('some_book',title={{ i.title }})}}">{{ i.title }}</div>					
+						<div class='col-md-4'>
+							<a href="{{url_for('some_book',title=i.title)}}">{{i.title}}</a>
+						</div>
 					{% endfor %}
 				{% endif %}
 			</div>

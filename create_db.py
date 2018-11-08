@@ -62,6 +62,7 @@ def create_books():
 		print("we added a book into the DB! it was: "+title)
 	else:
 		print("there was a dupe!")
+		dupe = False
 
 def create_authors():
     book = load_json('books.json')

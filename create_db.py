@@ -1,7 +1,7 @@
 import psycopg2
 import json, logging 
 from sqlalchemy.orm import sessionmaker
-from models import db, Book
+from models import db, Book, Author
 
 #from models import Base, Book, Author, Publisher, engine
 #Base.metadata.bind = engine
@@ -66,6 +66,7 @@ def create_books():
 def create_authors():
     book = load_json('books.json')
     counter = 0
+    dupe = False
     for oneBook in book:
         title = oneBook['title']
         publishers_attribute = oneBook['publishers']
@@ -106,7 +107,20 @@ def create_authors():
                 img_url = j['image_url']
             except:
                 img_url = "None"
-        newAuthor =  Authors(name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url, title = title, publisher = publisher)
+        newAuthor =  Author(name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url, publisher = publisher)
+	cursor.execute("SELECT name FROM author")
+	rows = cursor.fetchall()
+	for row in rows:
+		if author in row:
+			dupe = True
+			continue
+	if(not dupe):
+		db.session.add(newAuthor)
+		db.session.commit()
+		counter += 1
+		print("we added an author into the DB! it was: "+author)
+	else:
+		print("there was a dupe!")
 '''
         if session.query(Authors).filter(Authors.name == newAuthor.name).count() == 0: 
             db.session.add(newAuthor)

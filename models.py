@@ -45,6 +45,7 @@ class Author(db.Model):
     wikipedia_url = db.Column(db.String)
     died = db.Column(db.String, nullable = True)
     image_url = db.Column(db.String)
+    publisher = db.Column(db.String)
     def __repr__(self):
         return self.name
 '''
@@ -60,6 +61,7 @@ class Publisher(Base):
         return self.name
 '''
 
+db.drop_all()
 db.create_all()
 
 #db.drop_all()

@@ -4,24 +4,71 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+
+	<script type="text/javascript">
+		function sortTable(n) {
+			var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+			table = document.getElementById("authorsTable");
+			switching = true;
+			dir = "asc"; 
+			while (switching) {
+				switching = false;
+				rows = table.getElementsByTagName("TR");
+				for (i = 1; i < (rows.length - 1); i++) {
+					shouldSwitch = false;
+					x = rows[i].getElementsByTagName("TD")[n];
+					y = rows[i + 1].getElementsByTagName("TD")[n];
+					if (dir == "asc") {
+						if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+							shouldSwitch= true;
+							break;
+						}
+					} else if (dir == "desc") {
+						if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+							shouldSwitch= true;
+							break;
+						}
+					}
+				}
+				if (shouldSwitch) {
+					rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+					switching = true;
+					switchcount ++; 
+				} else {
+					if (switchcount == 0 && dir == "asc") {
+						dir = "desc";
+						switching = true;
+					}
+				}
+			}
+		}
+	</script>
+
+
 	</head>
 	<body>
 		<div class = "container-field">
 			<h1>Authors</h1>
 			<p class = "lead">"Discover a world of new authors!" </p>
-			<div class = "row">
-				{% if authors == []  %}
-					<p>no authors in database</p>
-				{% else %}
-					{% for i in authors %}
-						<div class="col-md-4">
-							<a data-name = "{{i.name}}" href="{{url_for('singleauthor', author_id = i.id)}}">{{i.name}}</a>
-						</div>
-					{% endfor %}
-				{% endif %}
-			</div>
-
 		</div>
+			<table id="authorsTable" BORDER="2">
+				<tr>
+					<th onclick = "sortTable(0)">Author Name</th>
+					<th onclick = "sortTable(1)">Date of Birth</th>
+					<th onclick = "sortTable(2)">Alma Mater</th>
+					<th onclick = "sortTable(3)">Nationality</th>
+					<th onclick = "sortTable(4)">Education</th>
+				</tr>
+				{% for i in authors %}
+					<tr>
+						<td><a data-name = "{{i.name}}" href="{{url_for('singleauthor', author_id = i.id)}}">{{i.name}}</a></td>
+						<td>{{i.born}}</td>
+						<td>{{i.alma_mater}}</td>
+						<td>{{i.nationality}}</td>
+						<td>{{i.education}}</td>
+					</tr>
+				{% endfor %}
+
 		<div>
 			<a href="{{url_for('index')}}">Main Menu</a>
 		</div>

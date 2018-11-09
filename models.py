@@ -47,7 +47,7 @@ class Author(db.Model):
 	description = db.Column(db.String)
 	alma_mater = db.Column(db.String)
 	wikipedia_url = db.Column(db.String)
-	#died = db.Column(db.String, nullable = True)
+	#died = db.Column(db.String, nullable = False)
 	image_url = db.Column(db.String)
 	#publisher = db.Column(db.String)
 

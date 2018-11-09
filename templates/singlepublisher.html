@@ -9,9 +9,10 @@
 	</head>
 	<hr />
 	<body>
-		<table> 
-			<tr>     <!-- Row tags: <tr> </tr> -->
-		  		<td>Name</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
+		<table>
+<!-- 
+			<tr>    
+		  		<td>Name</td> 
 		  		<td>{{ publisher.name }}</td>
 			</tr>
 			<tr>
@@ -21,10 +22,11 @@
 			<tr>
 		  		<td>Description</td>
 		  		<td>{{ publisher.description }}</td>
+
 			</tr>
 			<tr>
 		  		<td>Wikipedia</td>
-		  		<td><a href="{{ publisher.wikipedia_url }"}>wiki</a></td>
+		  		<td><a href="{{ publisher.wikipedia_url }}">wiki</a></td>
 			</tr>
 			<tr>
 		  		<td>Image</td>
@@ -40,7 +42,7 @@
 		  		<td><ul>
 				</ul></td>
 			</tr>
-
+--!>
     </table>
 		<hr/>	
 			<a href="{{url_for('index')}}">Main Menu</a>

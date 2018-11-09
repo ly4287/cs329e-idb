@@ -48,18 +48,18 @@ class Author(db.Model):
     publisher = db.Column(db.String)
     def __repr__(self):
         return self.name
-'''
-class Publisher(Base):
+
+class Publisher(db.Model):
     __tablename__ = 'publisher'
-    wikipedia_url = Column(String)
-    name = Column(String, primary_key = True, nullable = False)
-    description = Column(String)
-    owner = Column(String)
-    image_url = Column(String)
-    website = Column(String)
+    wikipedia_url = db.Column(db.String)
+    name = db.Column(db.String, primary_key = True, nullable = False)
+    description = db.Column(db.String)
+    owner = db.Column(db.String)
+    image_url = db.Column(db.String)
+    website = db.Column(db.String)
+    author = db.Column(db.String)
     def __repr__(self):
         return self.name
-'''
 
 db.drop_all()
 db.create_all()

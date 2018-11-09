@@ -1,7 +1,7 @@
 import psycopg2
 import json, logging 
 from sqlalchemy.orm import sessionmaker
-from models import db, Book, Author
+from models import db, Book, Author, Publisher
 
 #from models import Base, Book, Author, Publisher, engine
 #Base.metadata.bind = engine
@@ -130,13 +130,16 @@ def create_authors():
             counter += 1
 '''
 
-'''        
 def create_publishers():
     book = load_json('books.json')
     counter = 0
+    dupe = False
     for oneBook in book:
         title = oneBook['title']
         publishers_attribute = oneBook['publishers'] 
+        authors_attribute = oneBook['authors']
+        for j in authors_attribute:
+            author = j['name']
         for i in publishers_attribute:
             publisher = i['name']
             try:
@@ -159,17 +162,30 @@ def create_publishers():
                 website = i['website']
             except:
                 website = "None"
-        authors_attribute = oneBook['authors']
-        for j in authors_attribute:
-            author = j['name']
-        newPublisher = Publishers(title= title, author = author, name = publisher, wiki_url = wiki, description = desc, owner = owner, image_url = img_url, website = website, id = counter)
+            newPublisher = Publisher(author = author, name = publisher, wikipedia_url = wiki, description = desc, owner = owner, image_url = img_url, website = website)
+	    cursor.execute('SELECT name FROM publisher')
+	    rows = cursor.fetchall()
+	    for row in rows:
+		    if publisher in row:
+			    dupe = True
+			    continue
+	    if(not dupe):
+		    db.session.add(newPublisher)
+		    db.session.commit()
+		    counter += 1
+		    print("we added a publisher into the DB! it was " + publisher)
+	    else:
+		    print("there was a dupe!")
+		    dupe = False
+'''
         if session.query(Publishers).filter(Publishers.name == newPublisher.name).count() == 0: 
             session.add(newPublisher)
             session.commit()
             counter += 1
 '''
+
 create_books()
 create_authors()
+create_publishers()
 
 cursor.close()
-#create_publishers()

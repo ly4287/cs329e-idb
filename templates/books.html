@@ -16,7 +16,8 @@
 				{% else %}
 					{% for i in books %}
 						<div class="col-md-4">
-							<a href="{{url_for('some_book', book_id  = i.id)}}">{{i.title}}</a>
+
+							<a data-name = "{{i.title}}" href="{{url_for('singlebook', book_id = i.id)}}">{{i.title}}</a>
 						</div>
 					{% endfor %}
 				{% endif %}

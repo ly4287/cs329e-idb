@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>{{ name }}</title>
+	<title>{{ publisher.name }}</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,33 +12,32 @@
 		<table> 
 			<tr>     <!-- Row tags: <tr> </tr> -->
 		  		<td>Name</td> <!-- Cell tags (standard cell): <td> </td> by default, these are regular and left-aligned.-->
-		  		<td>{{ name }}</td>
+		  		<td>{{ publisher.name }}</td>
 			</tr>
 			<tr>
 		  		<td>Owner</td>
-		  		<td>{{ owner }}</td>
+		  		<td>{{ publisher.owner }}</td>
 			</tr>			
 			<tr>
 		  		<td>Description</td>
-		  		<td>{{ description }}</td>
+		  		<td>{{ publisher.description }}</td>
 			</tr>
 			<tr>
 		  		<td>Wikipedia</td>
-		  		<td><a href={{ wikipedia_url }}>{{ name }}</a></td>
+		  		<td><a href="{{ publisher.wikipedia_url }"}>wiki</a></td>
 			</tr>
 			<tr>
 		  		<td>Image</td>
-		  		<td><img src={{ image_url }}></td>
+		  		<td><img src="{{ publisher.image_url }}"></td>
 			</tr>
 			<tr>
 		  		<td>Website</td>
-		  		<td><a href={{ website }}>{{ name }}</a></td>
+		  		<td><a href="{{ publisher.website }"}>website</a></td>
 			</tr>
 
 			<tr>
 		  		<td>Books</td>
 		  		<td><ul>
-					<li><a href="{{url_for('harrypotter')}}">Harry Potter and the Sorcerer's Stone</a></li>			
 				</ul></td>
 			</tr>
 

@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>{{ title }}</title>
+	<title>{{ book.title }}</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,32 +15,34 @@
 			</tr>
 			<tr>
 		  		<td>Google ID</td>
-		  		<td>{{ gooogle_id }}</td>
+		  		<td>{{ book.google_id }}</td>
 			</tr>
 			<tr>
 		  		<td>ISBN</td>
-		  		<td>{{ isbn }}</td>
+		  		<td>{{ book.isbn }}</td>
 			</tr>
 			<tr>
 		  		<td>Publication Date</td>
-		  		<td>{{ publication_date }}</td>
+		  		<td>{{ book.publication_date }}</td>
 			</tr>
 			<tr>
 		  		<td>Description</td>
-		  		<td>{{ description }}
+		  		<td>{{ book.description }}
 			</tr>
+<!--
 			<tr>
 		  		<td>Image</td>
-		  		<td><img src={{ image_url }}></td>
+		  		<td><img src="{{ book.image_url }}"></td>
 			</tr>
 			<tr>
 		  		<td>Author</td>
-		  		<td><a href="{{url_for('some_author',name = author)}}">{{ author }}</a></td>
+		  		<td><a href="{{url_for('singleauthor',author_id = book.author_id)}}">{{ book.author }}</a></td>
 			</tr>
 			<tr>
 		  		<td>Publisher</td>
-		  		<td><a href="{{url_for('some_publisher',name = publisher)}}">{{ publisher }}</a></td>
+		  		<td><a href="{{url_for('singlepublisher',pub_id = book.pub_id)}}">{{ book.publisher }}</a></td>
 			</tr>
+--!>
 
     </table>
 		<hr/>	

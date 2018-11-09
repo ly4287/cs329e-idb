@@ -62,7 +62,6 @@ class Publisher(db.Model):
 	website = db.Column(db.String)
 	#author = db.Column(db.String)
 
-db.drop_all()
 db.create_all()
 
 #db.drop_all()

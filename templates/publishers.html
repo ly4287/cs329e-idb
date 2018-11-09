@@ -10,11 +10,16 @@
 			<h1>Publishers</h1>
 			<p class = "lead">"Discover a world of new publishers!" </p>
 			<div class = "row">
-				<div class="col-md-4"><a href="{{url_for('pottermore')}}">Pottermore</div>
-				<div class="col-md-4"><a href="{{url_for('randomhouse')}}">Random House</div>
-				<div class="col-md-4"><a href="{{url_for('barrons')}}">Barron's Educational Series</div>
-				<div class="col-md-4"><a href="{{url_for('some_publisher',name="Pottermore")}}">Some publisher</div>
-
+				{% if publishers == []  %}
+					<p>no publishers in database</p>
+				{% else %}
+					{% for i in publishers %}
+						<div class="col-md-4">
+							{{i.name}}
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
 		</div>
 		<hr/>	
 			<a href="{{url_for('index')}}">Main Menu</a>

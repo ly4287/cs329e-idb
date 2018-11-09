@@ -146,7 +146,7 @@ def create_publishers():
                 wiki = i['wikipedia_url']
             except:
                 wiki = "None"
-            try:g
+            try:
                 desc = i['description']
             except:
                 desc = "None"

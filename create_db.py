@@ -46,7 +46,28 @@ def create_books():
         authors_attribute = oneBook['authors']
         for j in authors_attribute:
             author = j['name']
-        newBook = Book(title = title, google_id = g_id, isbn = isbn_, image_url = img_url, publication_date = pub_date, description = desc, author = author, publisher = publisher)
+
+	cursor.execute('SELECT id, name FROM author')
+	rows = cursor.fetchall()
+	print(author)
+	for row in rows:
+		#print(row)
+		if(row[1] == author):
+			author_id = row[0]
+			break
+	print(author_id)
+
+	cursor.execute('SELECT id, name FROM publisher')
+	rows = cursor.fetchall()
+	print(publisher)
+	for row in rows:
+		#print(row)
+		if(row[1] == publisher):
+			pub_id = row[0]
+			break
+	print(pub_id)
+
+        newBook = Book(id = counter, title = title, google_id = g_id, isbn = isbn_, image_url = img_url, publication_date = pub_date, description = desc, author = author, publisher = publisher, pub_id = pub_id, author_id = author_id)
 	cursor.execute("SELECT google_id FROM book")
 	rows = cursor.fetchall()
 	for row in rows:
@@ -108,7 +129,7 @@ def create_authors():
                 img_url = j['image_url']
             except:
                 img_url = "None"
-            newAuthor =  Author(name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url, publisher = publisher)
+            newAuthor =  Author(id = counter, name = author, born = born, education = education, nationality = nationality, description = desc, alma_mater = alma, wikipedia_url = wiki, image_url = img_url)
 	    cursor.execute("SELECT name FROM author")
 	    rows = cursor.fetchall()
 	    for row in rows:
@@ -162,7 +183,7 @@ def create_publishers():
                 website = i['website']
             except:
                 website = "None"
-            newPublisher = Publisher(author = author, name = publisher, wikipedia_url = wiki, description = desc, owner = owner, image_url = img_url, website = website)
+            newPublisher = Publisher(id = counter, name = publisher, wikipedia_url = wiki, description = desc, owner = owner, image_url = img_url, website = website)
 	    cursor.execute('SELECT name FROM publisher')
 	    rows = cursor.fetchall()
 	    for row in rows:
@@ -184,8 +205,8 @@ def create_publishers():
             counter += 1
 '''
 
-create_books()
 create_authors()
 create_publishers()
+create_books()
 
 cursor.close()

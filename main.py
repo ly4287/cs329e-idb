@@ -39,16 +39,32 @@ def books():
     books = db.session.query(Book).all()
     return render_template('books.html', books = books)
 
+@app.route('/books/<int:book_id>')
+def singlebook(book_id):
+	single_book = db.session.query(Book).get(book_id)
+	return render_template('some_book.html', book_id = book_id, book = single_book)
+
 @app.route('/authors/')
 def authors():
     authors = db.session.query(Author).all()
     return render_template('authors.html', authors = authors)
+
+@app.route('/authors/<int:author_id>')
+def singleauthor(author_id):
+	single_author = db.session.query(Author).get(author_id)
+	return render_template('some_author.html', author_id = author_id, author = single_author)
 
 @app.route('/publishers/')
 def publishers():
     publishers = db.session.query(Publisher).all()
     return render_template('publishers.html', publishers = publishers)
 
+@app.route('/publishers/<int:pub_id>')
+def singlepublisher(pub_id):
+	single_publisher = db.session.query(Publisher).get(pub_id)
+	return render_template('some_publisher.html', pub_id = pub_id, publisher = single_publisher)
+
+'''
 @app.route('/book/<title>/')
 def some_book(title):
 	for i in book_data:
@@ -130,7 +146,7 @@ def randomhouse():
 @app.route('/barrons/')
 def barrons():
     return render_template('barrons.html')
-
+'''
 
 # if main.py is run directly, i.e., as the main module, it will be assigned the value main
 # and if it's main go ahead and run the application.

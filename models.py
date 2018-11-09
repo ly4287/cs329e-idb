@@ -24,42 +24,43 @@ db = SQLAlchemy(app)
 #Base = declarative_base()
 
 class Book(db.Model):
-    __tablename__ = 'book'
-    google_id = db.Column(db.String, primary_key = True)
-    title = db.Column(db.String, unique=True)
-    isbn = db.Column(db.String)
-    publication_date = db.Column(db.String)
-    image_url = db.Column(db.String)
-    description = db.Column(db.String)
-    publisher = db.Column(db.String)
-    author = db.Column(db.String)
+	__tablename__ = 'book'
+	id = db.Column(db.Integer, primary_key = True, nullable = False)
+	google_id = db.Column(db.String)
+	title = db.Column(db.String, unique = True, nullable = False)
+	isbn = db.Column(db.String)
+	publication_date = db.Column(db.String)
+	image_url = db.Column(db.String)
+	description = db.Column(db.String)
+	publisher = db.Column(db.String)
+	author = db.Column(db.String)
+	pub_id = db.Column(db.Integer)
+	author_id = db.Column(db.Integer)
 
 class Author(db.Model):
-    __tablename__ = 'author'
-    born = db.Column(db.String)
-    name = db.Column(db.String, primary_key = True, nullable = False)
-    education = db.Column(db.String)
-    nationality = db.Column(db.String)
-    description = db.Column(db.String)
-    alma_mater = db.Column(db.String)
-    wikipedia_url = db.Column(db.String)
-    died = db.Column(db.String, nullable = True)
-    image_url = db.Column(db.String)
-    publisher = db.Column(db.String)
-    def __repr__(self):
-        return self.name
+	__tablename__ = 'author'
+	id = db.Column(db.Integer, primary_key = True, nullable = False)
+	born = db.Column(db.String)
+	name = db.Column(db.String, nullable = False)
+	education = db.Column(db.String)
+	nationality = db.Column(db.String)
+	description = db.Column(db.String)
+	alma_mater = db.Column(db.String)
+	wikipedia_url = db.Column(db.String)
+	#died = db.Column(db.String, nullable = True)
+	image_url = db.Column(db.String)
+	#publisher = db.Column(db.String)
 
 class Publisher(db.Model):
-    __tablename__ = 'publisher'
-    wikipedia_url = db.Column(db.String)
-    name = db.Column(db.String, primary_key = True, nullable = False)
-    description = db.Column(db.String)
-    owner = db.Column(db.String)
-    image_url = db.Column(db.String)
-    website = db.Column(db.String)
-    author = db.Column(db.String)
-    def __repr__(self):
-        return self.name
+	__tablename__ = 'publisher'
+	id = db.Column(db.Integer, primary_key = True, nullable = False)
+	wikipedia_url = db.Column(db.String)
+	name = db.Column(db.String, nullable = False)
+	description = db.Column(db.String)
+	owner = db.Column(db.String)
+	image_url = db.Column(db.String)
+	website = db.Column(db.String)
+	#author = db.Column(db.String)
 
 db.drop_all()
 db.create_all()

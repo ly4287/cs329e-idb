@@ -14,9 +14,13 @@
 					<p>no authors in database</p>
 				{% else %}
 					{% for i in authors %}
-						<div class="col-md-4">
-							{{i.name}}
-						</div>
+						<tr>
+							<td><a data-name = "{{i.name}}" href="{{url_for('some_author', author_id = i.id)}}">{{i.name}}</a></td>
+							<td>{{i.born}}</td>
+							<td>{{i.alma_mater}}</td>
+							<td>{{i.nationality}}</td>
+							<td>{{i.education}}</td>
+						</tr>
 					{% endfor %}
 				{% endif %}
 			</div>

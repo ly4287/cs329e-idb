@@ -63,6 +63,18 @@ def publishers():
 def singlepublisher(pub_id):
 	single_publisher = db.session.query(Publisher).get(pub_id)
 	return render_template('singlepublisher.html', pub_id = pub_id, publisher = single_publisher)
+	
+@app.route('/test/')
+def test():
+	p = subprocess.Popen(["coverage", "run", "--branch", "test.py"],
+			stdout=subprocess.PIPE,
+			stderr=subprocess.PIPE,
+			stdin=subprocess.PIPE)
+	out, err = p.communicate()
+	output=err+out
+	output = output.decode("utf-8") #convert from byte type to string type
+	
+	return render_template('test.html', output = "<br/>".join(output.split("\n")))
 
 '''
 @app.route('/book/<title>/')

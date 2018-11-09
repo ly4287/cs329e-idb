@@ -1,0 +1,740 @@
+commit 1127b50f4ff1c3b024f6088efe59ce03a87071ea
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:50:45 2018 +0000
+
+    pydoc
+
+commit e4b4c6a67ddaeaa37af3a106f52be5e8d1a8819b
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:45:18 2018 +0000
+
+    update requirements
+
+commit 8884eeb4bc0c31eb193ec506be6b80acfc578bbc
+Merge: fcb6d8e 7e3ec2f
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:43:41 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit fcb6d8e939214e2d98c714d512e8e94d04ab9ae2
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:43:31 2018 +0000
+
+    ci
+
+commit 7e3ec2fbec9b77bf7995c1b184465ce8db9ac36b
+Author: Paul Tan <paultan100@gmail.com>
+Date:   Fri Nov 9 03:42:58 2018 +0000
+
+    add unittest html
+
+commit 623c245edfbe64502320900973cacf5a3fbf2791
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:40:22 2018 +0000
+
+    tests done
+
+commit 155375e28360ed17b6a74b608643c6033314c3ef
+Merge: a92e82e a42a7ee
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:30:40 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit a92e82e2be67460cb6c9efb54e7dfee6cd648396
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:30:28 2018 +0000
+
+    lets get it
+
+commit a42a7eed6d3a50b495df567b575f549e5ea97fa4
+Author: Paul Tan <paultan100@gmail.com>
+Date:   Fri Nov 9 03:11:58 2018 +0000
+
+    Update test.py
+
+commit f3c9173008399b67aabb146e29aa78739ecf863d
+Author: Paul Tan <paultan100@gmail.com>
+Date:   Fri Nov 9 03:10:54 2018 +0000
+
+    Update test.py
+
+commit 0ae91edde0ed5a9354b628f0c62c0d008d814aa1
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 03:00:20 2018 +0000
+
+    fixed publisher, book
+
+commit 2a673456a004659af9f1207fb13dbec0c79a4377
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 02:53:50 2018 +0000
+
+    test file
+
+commit dedc84c66df6fb6f32403bacd10e3d09008716fc
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 02:30:34 2018 +0000
+
+    big push
+
+commit 22e44d8f46b23d2392ba6a473692f713f3972e4b
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 01:21:05 2018 +0000
+
+    lets see if this works
+
+commit a3f0a99da2ccbd81c1f5653564e2745c969a76bf
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 00:06:45 2018 +0000
+
+    think done
+
+commit 2bf9652e31dba0581d77605215ab9f53f79b6df7
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Nov 9 00:02:58 2018 +0000
+
+    all 3 in. just need to interface with html
+
+commit 6998f8c6fee19a2052e7383e446ac2caa79f83c5
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 23:42:03 2018 +0000
+
+    done?
+
+commit 80dd3c3c7b0590516aa3a1818a06c0677f0781a4
+Merge: d335a7d 0a01870
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 23:30:28 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit d335a7d40099eb377a21013cf20e3074a61b3be1
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 23:30:25 2018 +0000
+
+    confused
+
+commit 0a01870837cb86962cedf068bf8b8aa9581fb4b9
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 17:20:52 2018 -0600
+
+    edited
+
+commit fd39d83e42a8b4c2c278ad8a0627d8e8c37b68dd
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 17:19:47 2018 -0600
+
+    edited author function
+
+commit 4a1193a3ea64d8623f48b468261a98aa54f8ed42
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 23:15:07 2018 +0000
+
+    ok
+
+commit 117fadf4379fe13d8baf32e35f8cf5dc111dd480
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 16:59:08 2018 -0600
+
+    repush
+
+commit 7745f55c7b044e60ad102073bbb63a0eacfec194
+Merge: 1566c40 47a2326
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 16:58:31 2018 -0600
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit 1566c40a8e8e247e439de66cab3850d619577dc3
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 16:58:10 2018 -0600
+
+    pushed original
+
+commit 1c7313ebf3db15e59a06cf1788531c767b5fda8b
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 16:53:04 2018 -0600
+
+    recommit
+
+commit 47a23260c919ee4b020ff0fd0bcc8fe97755e887
+Merge: a0e5532 cafa37b
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 22:50:33 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit a0e553252140a0c1d74de4c3cb3b12bbdbbf75ee
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 22:50:24 2018 +0000
+
+    confused why authors doenst work
+
+commit cafa37b373b5c50251e83d0cb853b93c771af2f2
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Thu Nov 8 16:48:25 2018 -0600
+
+    try again?
+
+commit 9b88964438571390fe76570f639ec17e6eb17835
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Thu Nov 8 16:47:29 2018 -0600
+
+    testing
+
+commit d6045ce4b9ee7b1b08bcbc31f41ddf7d9b21e68c
+Merge: 2c12d78 169fb4d
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 22:34:16 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit 2c12d78db13369f3506198e222d5fd951ba6b27b
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 22:34:13 2018 +0000
+
+    to josh
+
+commit 169fb4dde3e8676e66e0fb04a1ea94b2f555e1e8
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Thu Nov 8 16:33:25 2018 -0600
+
+    testing books link
+
+commit 7ae1b17d3bdaad90e103b782e66b7e4eefd2f0d5
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 22:23:14 2018 +0000
+
+    to lydia
+
+commit 342ba474ec74a7c0d10469ca2bd680842933804f
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 21:12:43 2018 +0000
+
+    working on authors now
+
+commit 8566c7c573982ef5a3c3630439141ad3c8850ea1
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 20:57:15 2018 +0000
+
+    works now?
+
+commit c4805c3689949b41d1cadc69eae16c22dfd18a90
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 10:12:53 2018 +0000
+
+    postgres and website are now linked up
+
+commit 00bf4a26e8046596dd8f5a6f48e2b0c096f631a7
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 06:03:14 2018 +0000
+
+    changed url
+
+commit 0fa6084da358d868acda244e5da82eb0ba69872f
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 05:46:18 2018 +0000
+
+    updated readme to be more useful
+
+commit fb5382699fe626569d70da620322678107ccc332
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 05:41:35 2018 +0000
+
+    those two things are gone from repo but still in local
+
+commit 3784193b27b7b3c181f67448c8d7e3781f9699ba
+Merge: ca3d5b4 5e5dabb
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 05:39:27 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit ca3d5b40ffe7e4c59aa17fc8dccced36e2cce85a
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Nov 8 05:39:12 2018 +0000
+
+    added two lines to the ignore file
+
+commit 5e5dabbe511a0df41fe67b646c1b8917e39172d2
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 23:25:10 2018 -0600
+
+    fixed syntax
+
+commit 8380030746bdaafe22788e29e1c76ce0a9369746
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 23:20:41 2018 -0600
+
+    edited models
+
+commit 443f11698b1ea38cf73037b42b2de83eec3568d0
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 23:04:50 2018 -0600
+
+    fixed indent error
+
+commit ba9cfbccdf11d78f72154ecf9620c96bcd176056
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 23:00:58 2018 -0600
+
+    populate database in python
+
+commit edbcdc65260aad7034f221176ce2860d7a05d7a9
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 21:48:41 2018 -0600
+
+    added create_books function
+
+commit 3085e34a783cb18381425741b4fca70726d26c49
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 21:26:31 2018 -0600
+
+    fixed pipeline
+
+commit 73da65084713700afa2c1aebfa2ae67a041ea14a
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Nov 7 21:23:50 2018 -0600
+
+    created create_db.py and edited models.py
+
+commit e5dd72a084d3ca4a86a8a6e6761132f8256f0f19
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Nov 7 18:04:49 2018 +0000
+
+    website up and running
+
+commit e206b37df202b63bca5a0c6126c45ca159ef4df2
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Nov 7 17:52:29 2018 +0000
+
+    dev vs master?
+
+commit 8e491c5701656e0689ae0cc35d53c3f7b54bdd31
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Wed Nov 7 11:12:20 2018 -0600
+
+    added gitlab-ci.yml
+
+commit 3b1394993cbba8b23d6aa44e851a71958757dbf1
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Nov 6 17:45:24 2018 -0600
+
+    finalize
+
+commit ae79878f40fe241cac59949ea4b9de888d171be9
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Nov 6 17:15:51 2018 -0600
+
+    connected routes to pull in data from book json
+
+commit 569f3e260d4b9b65ec7d6d738f4f6d6e1591c67c
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Nov 6 15:59:49 2018 -0600
+
+    basic dynamic structure with temp placeholders for passed variables
+
+commit b5129b6cee05c242edc3254934934bada98a2d60
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Nov 6 10:58:45 2018 -0600
+
+    testing to make books dynamic
+
+commit ed879a913bfbe92a6369b0c06fb42c85cdce10f2
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Oct 26 00:03:05 2018 +0000
+
+    git log
+
+commit fe2dc237611ac616b760f7b74a479ad8f8f87fbe
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Fri Oct 26 00:00:13 2018 +0000
+
+    using rm --cached
+
+commit 024be04dbbe88e60e9b49b5db7321ebb5239731f
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Oct 25 23:57:55 2018 +0000
+
+    removed unnecessary files
+
+commit 031a20ee503ffa573e1cd1984b78f878a17d3535
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Oct 25 23:54:34 2018 +0000
+
+    fixed joshs picture for him
+
+commit ccb1449c9b97f01c9f7bdb52f380b6bb9d2cea07
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Thu Oct 25 23:53:04 2018 +0000
+
+    updated about us
+
+commit 3a75e62e6db6278131d9032c42da0960e25b4ea4
+Merge: eb57e67 780cd51
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Thu Oct 25 15:16:52 2018 -0500
+
+    finished lydia's about me
+
+commit eb57e670c2708c7284f5e727b0022ce6a6d7c373
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Thu Oct 25 15:15:07 2018 -0500
+
+    finished about me
+
+commit 780cd519d9c94b1675d4da18ea198ccdacd54c06
+Author: sathota <sathota@cs.utexas.edu>
+Date:   Thu Oct 25 14:36:57 2018 -0500
+
+    completed sai's about
+
+commit 84e196138444157ec504412696681194cd9e0c10
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Thu Oct 25 14:30:07 2018 -0500
+
+    paul i fixed the links and formatting to the splash/bootstrap
+
+commit fcf8e0f22c0543eb6f62f08c9ae7787b03e1d509
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Thu Oct 25 02:00:53 2018 -0500
+
+    changed the fonts in the splash page
+
+commit 10d1babfbfba920efa8b3036159a57d058a186b3
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Thu Oct 25 01:15:03 2018 -0500
+
+    worked on making the splash page...kinda janky but it's something
+
+commit 45bb60b41427a36d4f87c0b46daa2f3551c81818
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Oct 24 23:53:24 2018 -0500
+
+    edited nullables again
+
+commit ad1c4845842af6ed6e7187836c4a3d79d6343cb1
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Wed Oct 24 23:47:13 2018 -0500
+
+    fixed nullables
+
+commit 964eed7eeeab9161c75414d78838bc0608c63c96
+Merge: be39993 f5b4705
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Wed Oct 24 15:27:05 2018 -0500
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit be3999314af8a96ae1ca648857ca182117607526
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Wed Oct 24 15:26:22 2018 -0500
+
+    added about me
+
+commit f5b470552495b382b5439cb469260ca13aa4e704
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Wed Oct 24 10:47:52 2018 -0500
+
+    deleted Desktop folder??
+
+commit 9c0af0f151d38f8fa1891b4fc55686bcc5804772
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Wed Oct 24 10:30:57 2018 -0500
+
+    added bootstrap header to all html files
+
+commit 31d9349bf917626849d39f1d579abc8e06e6c368
+Author: Paul Tan <paultan100@gmail.com>
+Date:   Wed Oct 24 15:18:53 2018 +0000
+
+    Replace books.py
+
+commit adba8792c5faf9689150f11bd80c72aa4db4be6c
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Wed Oct 24 01:26:02 2018 -0500
+
+    added all info needed in about page except for tools closes #10
+
+commit 97ce26d1853b602854025445152e660f1e57b17d
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Wed Oct 24 01:05:53 2018 -0500
+
+    paul i fixed books/authors/publishers.html and made them all linkable
+
+commit 5f7452da3ed14787e4f742e4e28b6c3c5464dfea
+Merge: d3a6ac1 51c4ef5
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Wed Oct 24 00:06:19 2018 -0500
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit d3a6ac11d1f6b0795fa5e1e5683ac5e1310d7bfd
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Tue Oct 23 23:57:14 2018 -0500
+
+    this is the only way i know how to traverse the dictionaries within the json
+
+commit 51c4ef5b53575b90f9affaf22640eef5c065e662
+Author: sathota <sathota@cs.utexas.edu>
+Date:   Tue Oct 23 23:35:42 2018 -0500
+
+    bootstrap test on authors.html
+
+commit 4dd73072918ff86422c3d687d160e8f62d98dc94
+Author: Paul Tan <paultan100@gmail.com>
+Date:   Wed Oct 24 04:01:54 2018 +0000
+
+    Update books.py runs through first dictionary in list
+
+commit 4622ab7a8240a9d58c2f05a52a41a5c15f081855
+Author: paultan100 <34327924+paultan100@users.noreply.github.com>
+Date:   Tue Oct 23 22:54:29 2018 -0500
+
+    iterating through first dictionary of the list
+
+commit 08449eca3fc56e3eafd4fb7c6fbad253ec6798c6
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Oct 24 01:57:24 2018 +0000
+
+    made image smaller
+
+commit 819423df83cbe3c458d97d6cb852c91e910c4189
+Author: Patrick <patticus.zhu@gmail.com>
+Date:   Tue Oct 23 20:54:56 2018 -0500
+
+    added smaller picture
+
+commit 911c9d54a22ccd06bf3ebeca27adeffebc319e04
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Oct 24 01:54:25 2018 +0000
+
+    fixed typos in main.py, added about me, added some links so others can follow suit
+
+commit 1fd470855ba42d005ae0dcf9aa92606e3b8df38b
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Oct 24 01:28:43 2018 +0000
+
+    moved all the files out of folders
+
+commit a19a9de3e7afef73e6a4fb13f2a33f51d8ffaa04
+Merge: 278b0a0 74e60f2
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Oct 24 01:09:23 2018 +0000
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit 278b0a04fee5cee3bdbd5673ea4b104c18a10a3e
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Wed Oct 24 01:09:13 2018 +0000
+
+    linking html pages
+
+commit 74e60f2dfc047ef9384e4796ff11be20557def08
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:55:47 2018 -0500
+
+    fixed attributes
+
+commit 29eec8cf0fde9dd85b147645e94aba9d89f9c344
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:38:05 2018 -0500
+
+    fixed attribute
+
+commit 8a460c43291e91d1ca390367ebbfba84605f08e4
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:34:56 2018 -0500
+
+    fixed tabs
+
+commit a46f600542e968c729c31d4c232de7a2f6001d98
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:33:52 2018 -0500
+
+    fixed libraries
+
+commit 6e0c291d1d7b695677ec5d922ab8b6a02ad9e720
+Merge: 59756d1 54a4072
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:29:38 2018 -0500
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit 59756d184e5bc58047b331373db4503afd9e12d2
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:29:19 2018 -0500
+
+    created models.py
+
+commit fed5e68ef687f7643339db3c1bd05372c1bc1e21
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Tue Oct 23 19:27:46 2018 -0500
+
+    created models.py
+
+commit 54a4072dad765349195548ed40e3af670761539f
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Tue Oct 23 23:57:28 2018 +0000
+
+    splash page now has links to other pages
+
+commit 83a2ddb7ae039afaef10919d14aacb9c82d45911
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Tue Oct 23 23:50:31 2018 +0000
+
+    get those files outta here
+
+commit d12d3ed24341d64541ecef1ed7f4055ac21a7f57
+Author: Patrick <patticus.zhu@gmail.com>
+Date:   Tue Oct 23 18:34:46 2018 -0500
+
+    added my image
+
+commit fefca6eb051723fc938b0152379474978388dd10
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Tue Oct 23 23:30:20 2018 +0000
+
+    fixed main.py
+
+commit e6a09015d8e56df650f98593b4ef7a6b73654e7f
+Merge: 207c168 3d73de7
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Oct 23 13:19:43 2018 -0500
+
+    merge
+
+commit 207c1689361c167185f36fb89b13b4b269c60b02
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Oct 23 02:08:09 2018 -0500
+
+    added info/formatted 3 books/authors/publishers
+
+commit 3d73de7feeb1ed272d0fd0e758dd71fb4ebc9f3c
+Author: Paul Tan <paultan100@gmail.com>
+Date:   Tue Oct 23 06:57:33 2018 +0000
+
+    Trying to find a way to iterate through books file
+
+commit 28432b612ddb23e4bf437ac047a8045312bf1be3
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Tue Oct 23 01:19:06 2018 -0500
+
+    added info in table forms for author pages
+
+commit cfe9d9b28391216c4ffde3b11b5b3e393f8bd775
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Mon Oct 22 18:22:25 2018 -0500
+
+    sai i started setting up a table in shakespeare to list out all the info
+
+commit c0c4ca44e1ddc97466be1bdb928fc81175c88e74
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Mon Oct 22 18:09:04 2018 -0500
+
+    added 3 books, publishers and authors
+
+commit 16ee60c4c50b51d61bff3067d0aa243bca0a3f2c
+Author: ly4287 <ly4287@cs.utexas.edu>
+Date:   Mon Oct 22 17:12:11 2018 -0500
+
+    added lydia's picture
+
+commit 7f46f60ea776ca77c95ead5a4e08d5d9182e2bef
+Author: sathota <sathota@cs.utexas.edu>
+Date:   Mon Oct 22 16:53:30 2018 -0500
+
+    Sai's about us
+
+commit 38afa51bbb5dcd43fb4e0f866e20b4646e3ba39e
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Sat Oct 20 17:52:16 2018 -0500
+
+    edited text
+
+commit d06c86e38561ebef60932c472aba3964241744ab
+Merge: e8ed30a a0fb529
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Sat Oct 20 17:46:50 2018 -0500
+
+    Merge branch 'dev' of https://gitlab.com/patrickzhu7/cs329e-idb into dev
+
+commit e8ed30a80c9e3d8ab0b8f98001e6fec729146aed
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Sat Oct 20 17:46:40 2018 -0500
+
+    no more ci
+
+commit a0fb52981533005d5a4ce2c9c167a3db6443c617
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Sat Oct 20 22:45:07 2018 +0000
+
+    success. removed the test file
+
+commit c34e683ac5cb60b1dfea04b08875fa2ecd2b4554
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Sat Oct 20 22:44:07 2018 +0000
+
+    testing slack integration
+
+commit 8ae028681312af25ed876c258fcf786b087a859d
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Sat Oct 20 17:40:23 2018 -0500
+
+    changed bio
+
+commit c5a753b8830d485a32ca20d7c4835ed61b6bc1df
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Sat Oct 20 17:38:36 2018 -0500
+
+    pipeline configure
+
+commit 293aa8f4053189b2cb182725bc059472909ca02c
+Author: joshuacke <joshuacke@gmail.com>
+Date:   Sat Oct 20 17:10:15 2018 -0500
+
+    added webpages
+
+commit 109e10cbd3cf10c8de7201b598821e85e7e3fc68
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Sat Oct 20 20:37:56 2018 +0000
+
+    digital ocean now works
+
+commit 3274b237ab074d1e2860d708f7a395cb02ef3d6a
+Merge: 1c02d45 c4109cc
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Sat Oct 20 20:37:07 2018 +0000
+
+    Merge branch 'master' of https://gitlab.com/patrickzhu7/cs329e-idb
+
+commit 1c02d45ebf79bd5f6739e9bfa1856a720fa02428
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Sat Oct 20 20:36:53 2018 +0000
+
+    digital ocean stuff
+
+commit c4109cca8cb3af2fe32dac8f5521551164a50713
+Author: Patrick <patticus.zhu@gmail.com>
+Date:   Sat Oct 20 15:35:06 2018 -0500
+
+    finished flask tutorial
+
+commit 596741e1d23021e19285b04d6b56a9f5b059e736
+Author: Patrick <patticus.zhu@gmail.com>
+Date:   Mon Oct 15 10:43:23 2018 -0500
+
+    following along with the flask tutorial
+
+commit 6afc8f790fe82cf5b48e20d4fce91c0b17058517
+Author: Patrick <patticus.zhu@gmail.com>
+Date:   Mon Oct 15 10:00:32 2018 -0500
+
+    gitignore has venv
+
+commit d7609af4dabf04f8f7fe5c89148367f45cf2a191
+Author: Patrick Zhu <patticus.zhu@gmail.com>
+Date:   Mon Oct 15 14:52:13 2018 +0000
+
+    Initial commit
